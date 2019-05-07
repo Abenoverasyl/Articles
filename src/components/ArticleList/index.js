@@ -3,9 +3,9 @@ import Article from '../Article'
 import './style.css'
 
 export default function  ArticleList({ articles }) {
-    const ArticleElements = articles.map(article => 
+    const ArticleElements = articles.map((article, index) => 
         <li key={article.id} className="article-list__li">
-            <Article article = {article} />
+            <Article article = {article} defaultOpen = {index === 0}/>
         </li>
     )
 
